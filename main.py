@@ -1,30 +1,3 @@
-# import streamlit as st
-# import ssl
-
-# # Отключение проверки SSL-сертификата
-# ssl._create_default_https_context = ssl._create_unverified_context
-
-
-# url = 'https://sun9-70.userapi.com/impf/c857636/v857636932/99a20/ePl5azpmotw.jpg?size=603x800&quality=96&sign=4931e8bd4232808e47fd823ece43b6c4&c_uniq_tag=pPqbgunZrFzgPkKHuJFM-5BMRGa5yiE4nZ-TjR19E6c&type=album'
-# image = load_image_from_url(url).convert("RGB")
-
-# st.set_page_config(
-#     page_title='Проект. Введение в нейронные сети',
-#     layout='wide'
-# )
-
-# st.sidebar.header("Home page")
-# c1, c2 = st.columns(2)
-# c1 = st.columns(2)
-# c2.image(image)
-# c1.markdown("""
-# # CV project: multipage app
-# ### 1. Сегментация продуктов и блюд с помощью двухэтапной или YOLOv8 моделей
-# ### 2. Детекция ветрогенераторов с помощью YOLOv8 модели
-# ### 3. Очищение документов от шумов с помощью автоэнкодера 
-# """)
-
-
 import streamlit as st
 import ssl
 from PIL import Image
