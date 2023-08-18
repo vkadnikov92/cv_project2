@@ -190,4 +190,5 @@ websocket-client
 Werkzeug==2.3.7
 widgetsnbextension
 yacs==0.1.8
-zipp
+zippnumpy==1.25.2
+opencv-python==4.8.0.76
