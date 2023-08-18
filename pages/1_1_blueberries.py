@@ -9,7 +9,7 @@ import torchvision.models as models
 from torchvision.transforms import ToPILImage, Compose
 from torchvision import transforms as T
 import json
-from detectron2.data.datasets import register_coco_instances
+# from detectron2.data.datasets import register_coco_instances
 import io
 from PIL import Image, ImageDraw
 from ultralytics import YOLO  # Импортируем класс YOLO из ultralytics
