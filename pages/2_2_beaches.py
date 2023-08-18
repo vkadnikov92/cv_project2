@@ -11,7 +11,7 @@ import torchvision.models as models
 from torchvision.transforms import ToPILImage, Compose
 from torchvision import transforms as T
 import json
-from detectron2.data.datasets import register_coco_instances
+# from detectron2.data.datasets import register_coco_instances
 
 # Импорты Detectron2
 from detectron2 import model_zoo
