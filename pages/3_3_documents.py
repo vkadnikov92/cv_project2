@@ -32,22 +32,31 @@ model_autoencoder.eval()
 
 
 image = None
-st.title("Очистка документов от шумов")
 
-uploaded_file = st.file_uploader("Загрузите изображение в форматах 'jpg', 'png' или 'jpeg'", type=["jpg", "png", "jpeg"])
-url = st.text_input("Или введите URL изображения...")
+# Заголовок Streamlit
+st.title("Задача по очистке документов от 'шумов' силами автоэнкодера")
 
-if uploaded_file:
-    image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption='Uploaded Image.', use_column_width=True)
-elif url:
-    try:
-        image = load_image_from_url(url).convert("RGB")
-        st.image(image, caption='Loaded Image from URL.', use_column_width=True)
-    except:
-        st.write("Ошибка при загрузке изображения по URL. Проверьте ссылку и попробуйте еще раз.")
+# Выбор источника изображения (файл или URL)
+image_source = st.radio("Выберите источник изображения:", ("Файл", "URL"))
 
-if image:  # Если изображение успешно загружено (будь то через файл или URL)
+uploaded_file = None
+url = None
+
+if image_source == "Файл":
+    uploaded_file = st.file_uploader("Загрузите изображение в форматах 'jpg', 'png' или 'jpeg'", type=["jpg", "png", "jpeg"])
+    if uploaded_file:
+        image = Image.open(uploaded_file).convert("RGB")
+        st.image(image, caption='Uploaded Image.', use_column_width=True)
+elif image_source == "URL":
+    url = st.text_input("Или введите URL изображения...")
+    if url:
+        try:
+            image = load_image_from_url(url).convert("RGB")
+            st.image(image, caption='Loaded Image from URL.', use_column_width=True)
+        except:
+            st.write("Ошибка при загрузке изображения по URL. Проверьте ссылку и попробуйте еще раз.")
+
+if image: 
 
     desired_size = (540, 420)
 
