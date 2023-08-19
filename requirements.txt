@@ -35,7 +35,7 @@ fqdn==1.5.1
 gast==0.4.0
 gitdb==4.0.10
 GitPython==3.1.32
-detectron2
+detectron2==0.2.1+cpu
 google-auth==2.22.0
 google-auth-oauthlib==1.0.0
 google-pasta==0.2.0
